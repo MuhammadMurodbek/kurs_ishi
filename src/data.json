@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "_id":"dress1",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-04-54.jpg",
+            "description":"about dress 1",
+            "price":15,
+            "avialable":["X","L","XL", "XXL"]
+        },
+        {
+            "_id":"dress2",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-05-06.jpg",
+            "description":"about dress 1",
+            "price":24,
+            "avialable":["X","L","XL", "XXL"]
+        },
+        {
+            "_id":"dress3",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-05-23.jpg",
+            "description":"about dress 1",
+            "price":19,
+            "avialable":["X","L","XL", "XXL"]
+        },
+        {
+            "_id":"dress4",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-05-36.jpg",
+            "description":"about dress 1",
+            "price":21,
+            "avialable":["X","L","XL", "XXL"]
+        },
+        {
+            "_id":"dress5",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-05-59.jpg",
+            "description":"about dress 1",
+            "price":24,
+            "avialable":["X","L","XL", "XXL"]
+        },
+        {
+            "_id":"dress6",
+            "title":"Dress 1",
+            "image": "/images/photo_2020-02-14_08-06-15.jpg",
+            "description":"about dress 1",
+            "price":12,
+            "avialable":["X","L","XL", "XXL"]
+        }       
+    ]
+}
