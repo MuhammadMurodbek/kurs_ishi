@@ -1,47 +1,43 @@
 {
     "products": [
         {
-<<<<<<< HEAD
+
             "_id":0,
-            "title":"Dress1",
-=======
-            "_id":"dress1",
-            "title":"Dress 1",
->>>>>>> 759918dfdca6819fbeb81678f28183adaa7a9b6c
-            "image": "/images/photo_2020-02-14_08-04-54.jpg",
+            "title":"Dress1", 
+            "image": "/images/rasm1.jpg",
             "description":"about dress 1",
             "price":15,
             "avialable":["X","L","XL", "XXL"]
         },
         {
-<<<<<<< HEAD
+
             "_id":1,
-            "title":"Dress2",
-            "image": "/images/photo_2020-02-14_08-05-06.jpg",
+            "title":"Casual Dress2",
+            "image": "/images/rasm2.jpg",
             "description":"about dress 1",
             "price":24,
             "avialable":["X", "XXL"]
         },
         {
             "_id":2,
-            "title":"Dress3",
-            "image": "/images/photo_2020-02-14_08-05-23.jpg",
+            "title":"Active",
+            "image": "/images/rasm3.jpg",
             "description":"about dress 1",
             "price":19,
             "avialable":["X","L","XL", "XXL"]
         },
         {
             "_id":3,
-            "title":"Dress4",
-            "image": "/images/photo_2020-02-14_08-05-36.jpg",
+            "title":"Muslim Shop",
+            "image": "/images/rasm4.jpg",
             "description":"about dress 1",
             "price":21,
             "avialable":["XL", "XXL"]
         },
         {
             "_id":4,
-            "title":"Dress5",
-            "image": "/images/photo_2020-02-14_08-05-59.jpg",
+            "title":"Miskor",
+            "image": "/images/rasm5.jpg",
             "description":"about dress 1",
             "price":24,
             "avialable":["L", "XXL"]
@@ -49,7 +45,7 @@
         {
             "_id":5,
             "title":"Dress6",
-            "image": "/images/photo_2020-02-14_08-06-15.jpg",
+            "image": "/images/rasm6.jpg",
             "description":"about dress 1",
             "price":12,
             "avialable":["X","L","XL", "XXL"]
@@ -57,7 +53,7 @@
         {
             "_id":6,
             "title":"Dress7",
-            "image": "/images/photo_2020-02-14_08-04-54.jpg",
+            "image": "/images/rasm7.jpg",
             "description":"about dress 1",
             "price":15,
             "avialable":["X","L","XL", "XXL"]
@@ -65,7 +61,7 @@
         {
             "_id":7,
             "title":"Dress8",
-            "image": "/images/photo_2020-02-14_08-05-06.jpg",
+            "image": "/images/rasm8.jpg",
             "description":"about dress 1",
             "price":24,
             "avialable":["X", "XXL"]
@@ -73,71 +69,58 @@
         {
             "_id":8,
             "title":"Dress9",
-=======
-            "_id":"dress2",
-            "title":"Dress 1",
-            "image": "/images/photo_2020-02-14_08-05-06.jpg",
+            "image": "/images/rasm9.jpg",
             "description":"about dress 1",
             "price":24,
             "avialable":["X","L","XL", "XXL"]
         },
         {
-            "_id":"dress3",
-            "title":"Dress 1",
->>>>>>> 759918dfdca6819fbeb81678f28183adaa7a9b6c
-            "image": "/images/photo_2020-02-14_08-05-23.jpg",
+            "_id":9,
+            "title":"Dress10",
+            "image": "/images/rasm1.jpg",
             "description":"about dress 1",
             "price":19,
             "avialable":["X","L","XL", "XXL"]
         },
         {
-<<<<<<< HEAD
-            "_id":9,
+            "_id":10,
             "title":"Dress10",
-            "image": "/images/photo_2020-02-14_08-05-36.jpg",
+            "image": "/images/rasm10.jpg",
             "description":"about dress 1",
             "price":21,
             "avialable":["XL", "XXL"]
         },
         {
-            "_id":10,
-            "title":"Dress11",
-            "image": "/images/photo_2020-02-14_08-05-59.jpg",
-            "description":"about dress 1",
-            "price":24,
-            "avialable":["L", "XXL"]
-        },
-        {
             "_id":11,
             "title":"Dress12",
-=======
-            "_id":"dress4",
-            "title":"Dress 1",
-            "image": "/images/photo_2020-02-14_08-05-36.jpg",
+            "image": "/images/rasm12.jpg",
             "description":"about dress 1",
             "price":21,
             "avialable":["X","L","XL", "XXL"]
         },
         {
-            "_id":"dress5",
-            "title":"Dress 1",
-            "image": "/images/photo_2020-02-14_08-05-59.jpg",
+            "_id":12,
+            "title":"Dress13",
+            "image": "/images/rasm13.jpg",
             "description":"about dress 1",
             "price":24,
             "avialable":["X","L","XL", "XXL"]
         },
         {
-            "_id":"dress6",
-            "title":"Dress 1",
->>>>>>> 759918dfdca6819fbeb81678f28183adaa7a9b6c
-            "image": "/images/photo_2020-02-14_08-06-15.jpg",
+            "_id":13,
+            "title":"Dress14",
+            "image": "/images/rasm13.jpg",
             "description":"about dress 1",
             "price":12,
             "avialable":["X","L","XL", "XXL"]
-<<<<<<< HEAD
-        }         
-=======
-        }       
->>>>>>> 759918dfdca6819fbeb81678f28183adaa7a9b6c
+        },
+        {
+            "_id":14,
+            "title":"Dress11",
+            "image": "/images/rasm14.jpg",
+            "description":"about dress 1",
+            "price":24,
+            "avialable":["L", "XXL"]
+        }              
     ]
 }

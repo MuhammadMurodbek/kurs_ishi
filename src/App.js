@@ -11,22 +11,27 @@ import Product from './components/Product';
 import Sidebar from './components/Sidebar';
 import Categories from "./components/Categories"
 import data from "./data.json"
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import PaymentForm from './components/CartPayment';
 
 class App extends React.Component{
   constructor(){
     super();
     this.state={
-      products:data.products,
+      // products:data.products,
+      products:[],
       arrayToCheck:[],
       massivSelected:[],
       setCount:[],
-      // summa:0 ,
       count:0,
       size:"",
       sort:"",
     }
   }
   componentDidMount=()=>{
+    this.setState({
+      products:data.products
+    })
     this.state.setCount.length=this.state.products.length
     for(var i=0; i<this.state.setCount.length; i++){
       this.state.setCount[i]=0
@@ -122,54 +127,77 @@ class App extends React.Component{
     this.state.setCount[idNum]+=1
     console.log(this.state.setCount[idNum])
   }
-  
+  filterProductItems=(e)=>{
+    var sortMassiv=[]
+    var dataBase = data.products
+    sortMassiv = dataBase.filter(function(oop){
+      return oop.title.toLocaleLowerCase().indexOf(e.target.value.toLocaleLowerCase())>=0
+    })
+    e.target.value.length>0 ?
+    this.setState({
+      products:sortMassiv
+    }):
+    this.setState({
+      products:data.products
+    })
+  }
   render(){ 
     return (
       <div className="grid-container">
-        <header>
-          <a href="/">React shopping cart</a>
-          <ul className="header-messenger">
-            <li><a href="#telegram"><i className="fa fa-telegram"></i></a></li>
-            <li><a href="#instagram"><i className="fa fa-instagram"></i></a></li>
-            <li><a href="#youtube"><i className="fa fa-youtube"></i></a></li>
-            <li><a href="#facebook"><i className="fa fa-facebook"></i></a></li>
-          </ul>
-        </header>
+        <Router>
+          <Route path="/" exact>
+          <header>
+            <AddShoppingCartIcon style={{color:'#fff', fontSize:'large', margin:'0 10px'}}/>
+            <a href="/">React shopping cart</a>
+            <ul className="header-messenger">
+              <li><a href="#telegram"><i className="fa fa-telegram"></i></a></li>
+              <li><a href="#instagram"><i className="fa fa-instagram"></i></a></li>
+              <li><a href="#youtube"><i className="fa fa-youtube"></i></a></li>
+              <li><a href="#facebook"><i className="fa fa-facebook"></i></a></li>
+            </ul>
+          </header>
 
-        <main>   
-            <div className="content">
-              <div className="categories">
-                <span>myShop.uz</span>
-                <Categories/>
+          <main>   
+              <div className="content">
+                <div className="categories">
+                  <Categories/>
+                </div>
+                
+                <div className="main">
+                  <Filter count={this.state.products.length}
+                    size = {this.state.size}
+                    sort = {this.state.sort}
+                    filterProducts={this.filterProducts}
+                    sortProducts={this.sortProducts}
+                    filterItems={this.filterProductItems}
+                  />
+                  <Product products={this.state.products} addToCart={this.addToCart}/>
+                </div>
+                
+                <div className="sidebarItem">
+                  <span style={{textAlign:'center'}}>
+                    {this.state.massivSelected.length<=0 ? <p>Your shop bag is empty</p> : 
+                      <p>you have {this.state.massivSelected.length} items here</p>}
+                  </span>
+                  <Sidebar 
+                    massivSelected={this.state.massivSelected} 
+                    counter={this.state.setCount} 
+                    removeitem={this.removeSidebarItem}
+                  />
+                </div>
               </div>
-              
-              <div className="main">
-                <Filter count={this.state.products.length}
-                  size = {this.state.size}
-                  sort = {this.state.sort}
-                  filterProducts={this.filterProducts}
-                  sortProducts={this.sortProducts}
-                />
-                <Product products={this.state.products} addToCart={this.addToCart}/>
-              </div>
-              
-              <div className="sidebarItem">
-                <span style={{textAlign:'center'}}>
-                  {this.state.massivSelected.length<=0 ? <p>Your shop bag is empty</p> : 
-                    <p>you have {this.state.massivSelected.length} items here</p>}
-                </span>
-                <Sidebar 
-                  massivSelected={this.state.massivSelected} 
-                  counter={this.state.setCount} 
-                  removeitem={this.removeSidebarItem}
-                />
-              </div>
-            </div>
-        </main>
-          
-        <footer>
-          All right is reserved
-        </footer>
+          </main>
+            
+          <footer>
+            All right is reserved
+          </footer>
+          </Route>
+         <Route path="/payment">
+          <div className="cart-payment">
+            <PaymentForm/>
+          </div>
+         </Route>
+        </Router>
       </div>
     );
   }  

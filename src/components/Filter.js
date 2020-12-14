@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import TextField from '@material-ui/core/TextField';
 class Filter extends Component {
     render() {
         return (
             <div className="filter">
                 <div className="filter-result">{this.props.count} Products</div>
                 <div>
-                    <input type="search" placeholder="Search" className="filter-search"/>
+                    <input 
+                        type="search" 
+                        placeholder="Search" 
+                        className="filter-search"
+                        onChange={this.props.filterItems}
+                    />
                 </div>
                 <div className="filter-sort">
                     Order {" "}
@@ -42,5 +46,4 @@ class Filter extends Component {
         );
     }
 }
-
 export default Filter;

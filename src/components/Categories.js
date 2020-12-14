@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HomeIcon from '@material-ui/icons/Home';
-import FiberNewIcon from '@material-ui/icons/FiberNew';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import RecordVoiceOverIcon from '@material-ui/icons/RecordVoiceOver';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
@@ -10,6 +10,7 @@ class Categories extends Component {
         return (
             <div className="categories">
                 <ul className="list-group">
+                <span><DashboardIcon fontSize="large" style={{marginRight:'10px'}}/>Dashboard</span>
                     <li className="list-item">
                         <HomeIcon fontSize="large" />
                         <a href="#">Home</a>
@@ -17,11 +18,6 @@ class Categories extends Component {
                     <li className="list-item">
                         <AddShoppingCartIcon fontSize="large"/>
                         <a href="#">New Products</a>
-                        {/* <ul className="list-group">
-                            <li className="list-item"><a href="#">New Products</a></li>
-                            <li className="list-item"><a href="#">New Products</a></li>
-                            <li className="list-item"><a href="#">New Products</a></li>
-                        </ul> */}
                     </li>
                     <li className="list-item">
                         <RecordVoiceOverIcon fontSize="large"/>

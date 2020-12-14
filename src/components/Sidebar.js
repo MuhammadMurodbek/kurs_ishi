@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
+import TextTruncate from 'react-text-truncate'; 
+import {Link} from "react-router-dom"
 export default class Sidebar extends Component {
    constructor(){
        super()
@@ -19,16 +22,22 @@ export default class Sidebar extends Component {
                             </div>
                             <div className="sidebar-info-wrapper">
                                 <span className="sidebar-info-wrapper-title">
-                                    <p>{e.title}</p>
+                                    {/* <p>{e.title}</p> */}
+                                    <TextTruncate
+                                        line={1}
+                                        element="p"
+                                        truncateText="…"
+                                        text={e.title}
+                                    
+                                    />
                                 </span>
                                 <span className="sidebar-info-wrapper-price">
                                     <p>${e.price} x {this.props.counter[e._id]}</p>
                                     <Button 
-                                        variant="contained"
                                         color="secondary"
                                         onClick={()=>this.props.removeitem(e._id)}
                                     >
-                                        Remove
+                                        <DeleteOutlineIcon fontSize="large"/>
                                     </Button>
                                 </span>
                             </div>
@@ -50,9 +59,11 @@ export default class Sidebar extends Component {
                         <img src="../images/undraw.svg" alt="asd"/>
                     </span>
                     <span style={{marginTop:'10px'}}>
-                        <Button variant="contained" color="primary">
-                            Payment
-                        </Button>
+                        <Link to="/payment" style={{textDecoration:'none'}}>
+                            <Button variant="contained" color="primary">
+                                Payment
+                            </Button>
+                        </Link>
                     </span>
                 </div>
             </div>
