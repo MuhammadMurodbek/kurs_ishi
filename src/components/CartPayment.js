@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
 import Button from '@material-ui/core/Button';
+import {Animated} from "react-animated-css";
 export default function PaymentForm() {
     const [number, setNumber] = useState('')
     const [name, setName] = useState('')
@@ -11,6 +12,7 @@ export default function PaymentForm() {
 
     return(
         <div className="wrapper-card-credit">
+           <Animated animationIn="wobble"  isVisible={true}>
             <Cards
             number={number}
             name={name}
@@ -18,6 +20,7 @@ export default function PaymentForm() {
             cvc={cvc}
             focused={focus}
             />
+            </Animated>
             <form>
                 <input 
                     type="tel" 

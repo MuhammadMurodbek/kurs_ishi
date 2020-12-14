@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
+import {Animated} from "react-animated-css";
 import TextTruncate from 'react-text-truncate'; 
 function formatCurrency(num){
     return "$" + Number(num.toFixed(1).toLocaleString()+' ')
@@ -12,6 +13,7 @@ class Product extends Component {
                 <ul className="product-common">
                     {this.props.products.map(product => (
                         <li key={product._id}>
+                         <Animated animationIn="bounceInUp" animationOut="bounceInDown" isVisible={true}>
                             <div className="product">
                                 <a href={"#"+product._id}> 
                                     <img className="product-img" src={product.image} alt={product.title}/>
@@ -21,7 +23,6 @@ class Product extends Component {
                                         element="p"
                                         truncateText="…"
                                         text={product.title}
-                                    
                                     />
                                 </a>
                                 <div className="product-price">
@@ -36,7 +37,8 @@ class Product extends Component {
                                     </Button>
                                 </div>
                             </div>
-                        </li>
+                            </Animated>
+                        </li>         
                     ))}
                 </ul>
             </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline'
+import {Animated} from "react-animated-css";
 import TextTruncate from 'react-text-truncate'; 
 import {Link} from "react-router-dom"
 export default class Sidebar extends Component {
@@ -16,6 +17,7 @@ export default class Sidebar extends Component {
             <div className="sidebar">
                 <div className="sidebar-item-wrapper">
                     {this.props.massivSelected.map(e=>(
+                       <Animated animationIn="bounceInDown" animationOut="bounceOutLeft" isVisible={true}> 
                         <div key={e._id} className="sidebar-item">
                             <div className="sidebar-img-wrapper">
                                 <img src={e.image} alt={e.title}/>
@@ -42,7 +44,8 @@ export default class Sidebar extends Component {
                                 </span>
                             </div>
                         </div>
-                    ))}
+                        </Animated>
+                   ))}
                 </div>
                 <div className="total-price">
                     <span className="price">
