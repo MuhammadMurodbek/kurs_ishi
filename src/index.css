@@ -263,7 +263,7 @@ footer{
   background-color: #203040;
   color: #fff;
   padding-top: 10px;
-  position: relative;
+  /* position: relative; */
 }
 .categories span{
   display: flex;
@@ -318,13 +318,13 @@ footer{
 /* CREDIT CARD */
 .wrapper-card-credit{
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   justify-content: center;
   align-items: center;
-  /* background-color: green; */
+  background-color: #333;
 }
 .wrapper-card-credit form{
   display: flex;

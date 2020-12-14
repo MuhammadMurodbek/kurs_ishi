@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Snowfall from 'react-snowfall'
 import Filter from './components/Filter';
 import Product from './components/Product';
 import Sidebar from './components/Sidebar';
@@ -142,6 +143,10 @@ class App extends React.Component{
   }
   render(){ 
     return (
+      <>
+      <div style={{ }}>
+            <Snowfall  />
+      </div>
       <div className="grid-container">
         <Router>
           <Route path="/" exact>
@@ -198,6 +203,7 @@ class App extends React.Component{
          </Route>
         </Router>
       </div>
+      </>
     );
   }  
 }
